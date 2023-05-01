@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HeaderNavigation from './Theme/HeaderNavigation';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-       HELLO JULIAY
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import router from './Router';
+
+const App = () => {
+    return (
+        <div >
+            <HeaderNavigation />
+            <RouterProvider router={router} />
+        </div>
+    );
 }
 
 export default App;
